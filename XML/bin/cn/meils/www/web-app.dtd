@@ -1,0 +1,5 @@
+<! ELEMENT web-app (servelt*, servelt-mapping*, wel-file-list?)>
+<! ELEMENT servelt (servelt-name, description?, (servelt-class|jsp-file))>
+<! ELEMENT servelt-name (#PCDATA)>
+<! ELEMENT welcome-file-list (welcome-file+)>
+

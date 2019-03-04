@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+
+<!-- 定义schema根元素，指定默认空间、实例名称空间等 -->
+<xsd:schema xmlns="http://www.it666.cn/xml"
+        	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        	targetNamespace="http://www.it666.cn/xml" elementFormDefault="qualified">
+        	
+        	
+    <!-- 定义一个标签（元素element） -->
+    <xsd:element name="students" type="studentsType"/>  <!-- type为别名 -->
+    <!-- 定义一个标签 -->
+    
+    
+    
+    <!-- 定义一个复杂类型（复杂标签：标签当中还有子标签） name指明了别名-->
+    <xsd:complexType name="studentsType">
+    	<!-- sequence表示必须按照顺序 -->
+        <xsd:sequence>
+        	<!-- students 里面可以包含student元素，可以是0个，最大是无限个 -->
+            <xsd:element name="student" type="studentType" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+        <!-- 必须按照顺序 -->
+    </xsd:complexType>
+    <!-- 定义一个复杂类型（复杂标签：标签当中还有子标签） -->
+    
+    
+    <!-- 复杂类型 -->
+    <xsd:complexType name="studentType">
+        <xsd:sequence>
+            <xsd:element name="name" type="xsd:string"/>
+            <xsd:element name="age" type="ageType" />
+            <xsd:element name="sex" type="sexType" />
+        </xsd:sequence>
+        
+        <!-- 别名是studentType的标签包含的属性 -->
+        <!-- 名称是number，类型是numberType，必须包含 -->
+        <xsd:attribute name="number" type="numberType" use="required"/>
+        <!-- 别名是studentType的标签包含的属性 -->
+        
+    </xsd:complexType>
+    <!-- 复杂类型 -->
+    
+    <!-- =============下面指明了类型的详情============== -->
+    
+    
+    <!-- 简单类型： 简单标签（标签当中没有子标签了） -->
+    <!-- sex类型： 字符串、枚举 male 和 female -->
+    <xsd:simpleType name="sexType">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="male"/>
+            <xsd:enumeration value="female"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <!-- 简单类型 -->
+    
+    <!-- 简单类型 -->
+    <!-- age类型：整形、最小是0，最大是256 -->
+    <xsd:simpleType name="ageType">
+        <xsd:restriction base="xsd:integer">
+            <xsd:minInclusive value="0"/>
+            <xsd:maxInclusive value="256"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <!-- 简单类型 -->
+    
+    <!-- 简单类型 -->
+    <!-- number类型：字符串、正则匹配必须正确 -->
+    <xsd:simpleType name="numberType">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="lk_\d{4}"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <!-- 简单类型 -->
+    
+</xsd:schema> 

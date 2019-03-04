@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root SYSTEM "student.dtd">
+
+<root>
+	<students>
+		<student number="s001">
+			<name>zjj</name>
+			<age>21</age>
+		</student>
+	</students>
+	
+	<students>
+		<student number="s002">
+			<name>zjj</name>
+			<age>21</age>
+		</student>
+	</students>
+	
+	<person>
+		<cat>ccc</cat>
+	</person>
+</root>

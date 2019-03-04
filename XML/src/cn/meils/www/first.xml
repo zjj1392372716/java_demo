@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?> <!-- 文档申明 -->
+
+<!-- 第一个 XML-->
+<teamp>
+	<person>
+		<name>lll</name>
+		<age>22</age>
+		<![CDATA[
+			<abc>aaa</abc>
+		]]>
+	</person>
+	
+</teamp>

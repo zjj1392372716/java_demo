@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE root SYSTEM "web-app.dtd">
+
+<root>
+	<web-app>
+		<servelt>
+			<servelt-name>name</servelt-name>
+			<servelt-class>aaaaa</servelt-class>
+		</servelt>
+		
+		<servelt>
+			<servelt-name>name</servelt-name>
+			<servelt-class>aaaaa</servelt-class>
+		</servelt>
+		
+		<servelt-mapping>
+		
+		</servelt-mapping>
+		
+		<servelt-mapping>
+		
+		</servelt-mapping>
+		
+		<wel-file-list>
+			<welcome-file>aaa</welcome-file>
+		</wel-file-list>
+	</web-app>
+</root>
+

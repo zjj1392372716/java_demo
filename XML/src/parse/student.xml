@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><root>
+	<students>
+		<student number="s001">
+			<name>zjj</name>
+			<age>300</age>
+		</student>
+		
+		<student ID="00001" number="s002">
+			<name>zjj</name>
+			<age>300</age>
+		</student>
+		
+		
+	</students>
+	
+	<students>
+		<student number="s003">
+			<name>zjj</name>
+			<age>21</age>
+		</student>
+	</students>
+</root>
